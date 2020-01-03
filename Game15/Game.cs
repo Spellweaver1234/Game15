@@ -30,8 +30,7 @@ namespace Game15
 
         public void Shift(int position)
         {
-            int x, y;
-            PositionsToCoordinates(position, out x, out y);
+            PositionsToCoordinates(position, out int x, out int y);
 
             if (Math.Abs(spaceX - x) + Math.Abs(spaceY - y) != 1)
                 return;
@@ -85,7 +84,7 @@ namespace Game15
             return map[x, y];
         }
 
-        private int CoordsToPositions(int x,int y)
+        private int CoordsToPositions(int x, int y)
         {
             if (x < 0) x = 0;
             if (x > size - 1) x = size - 1;
